@@ -18,7 +18,7 @@ uint16_t led_to_bit(uint8_t led)
 void Leds_Create(uint16_t * puntero)
 {
     puerto = puntero;
-    *puerto = ALL_LEDS_OFF;
+    Led_TurnOffAll();
 }
 
 void Led_TurnOn(uint8_t led)
@@ -43,15 +43,6 @@ void Led_TurnOffAll(void)
 
 bool Led_State(uint8_t led)
 {
-    uint16_t state;
-    state = *puerto & led_to_bit(led);
-    if(state == LED_OFF)
-    {
-        return false;
-    }
-    else
-    {
-        return true;
-    }
+    return (*puerto & led_to_bit(led)) != LED_OFF;
 }
 

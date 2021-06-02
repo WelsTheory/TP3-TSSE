@@ -89,9 +89,9 @@ int main(void)
   run_test(test_TurnOnAndOffManyLeds, "test_TurnOnAndOffManyLeds", 46);
   run_test(test_TurnOnAllLeds, "test_TurnOnAllLeds", 55);
   run_test(test_TurnOffAllLeds, "test_TurnOffAllLeds", 62);
-  run_test(test_StateLedOff, "test_StateLedOff", 71);
-  run_test(test_StateLed, "test_StateLed", 71);
-  run_test(test_ParamLed, "test_ParamLed", 86);
+  run_test(test_StateLedOff, "test_StateLedOff", 70);
+  run_test(test_StateLed, "test_StateLed", 70);
+  run_test(test_ParamLed, "test_ParamLed", 85);
 
   return UnityEnd();
 }

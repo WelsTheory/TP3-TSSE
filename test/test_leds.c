@@ -61,8 +61,7 @@ void test_TurnOnAllLeds(void)
 // Se pueden apagar todos los LEDs de una vez.
 void test_TurnOffAllLeds(void)
 {
-    Led_TurnOn(3);
-    Led_TurnOn(LED);
+    Led_TurnOnAll();
     Led_TurnOffAll();
     TEST_ASSERT_EQUAL_HEX16(0x0000, ledsVirtuales);
 }

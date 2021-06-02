@@ -142,9 +142,7 @@ void test_TurnOffAllLeds(void)
 
 {
 
-    Led_TurnOn(3);
-
-    Led_TurnOn(5);
+    Led_TurnOnAll();
 
     Led_TurnOffAll();
 
@@ -152,7 +150,7 @@ void test_TurnOffAllLeds(void)
 
    ((void *)0)
 
-   ), (UNITY_UINT)(67), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(66), UNITY_DISPLAY_STYLE_HEX16);
 
 }
 
@@ -168,7 +166,7 @@ void test_StateLedOff(void)
 
     Led_TurnOff(5);
 
-    do {if (!(Led_State(5))) {} else {UnityFail( ((("LED ON "))), (UNITY_UINT)((UNITY_UINT)(75)));}} while(0);
+    do {if (!(Led_State(5))) {} else {UnityFail( ((("LED ON "))), (UNITY_UINT)((UNITY_UINT)(74)));}} while(0);
 
 }
 
@@ -182,7 +180,7 @@ void test_StateLed(void)
 
     Led_TurnOn(5);
 
-    do {if ((Led_State(5))) {} else {UnityFail( ((("LED OFF "))), (UNITY_UINT)((UNITY_UINT)(82)));}} while(0);
+    do {if ((Led_State(5))) {} else {UnityFail( ((("LED OFF "))), (UNITY_UINT)((UNITY_UINT)(81)));}} while(0);
 
 }
 
@@ -202,6 +200,6 @@ void test_ParamLed(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(90), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(89), UNITY_DISPLAY_STYLE_HEX16);
 
 }
